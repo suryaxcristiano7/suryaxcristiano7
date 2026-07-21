@@ -1,0 +1,99 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507"/>
+      <stop offset="50%" stop-color="#0A0E14"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#367BF0"/>
+      <stop offset="100%" stop-color="#FF3232"/>
+      <animate attributeName="y1" values="0%;100%;0%" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#405DE6"/>
+      <stop offset="35%" stop-color="#C13584"/>
+      <stop offset="70%" stop-color="#FD1D1D"/>
+      <stop offset="100%" stop-color="#F77737"/>
+    </linearGradient>
+
+    <linearGradient id="tgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2AABEE"/>
+      <stop offset="100%" stop-color="#229ED9"/>
+    </linearGradient>
+
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="cardGlowIg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="cardGlowTg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="frame3">
+      <rect x="4" y="4" width="892" height="272" rx="18"/>
+    </clipPath>
+
+    <style>
+      .mono   { font-family: 'Fira Code', monospace; }
+      .title  { font-family: 'Fira Code', monospace; font-weight: 800; fill: #E6EDF3; }
+      .sub    { fill: #8B949E; }
+      .dot    { fill: #22D3EE; }
+    </style>
+  </defs>
+
+  <rect x="4" y="4" width="892" height="272" rx="18" fill="none" stroke="url(#borderGrad3)" stroke-width="2.5" filter="url(#glow3)"/>
+  <rect x="6" y="6" width="888" height="268" rx="16" fill="url(#bgGrad3)"/>
+
+  <g clip-path="url(#frame3)">
+
+    <!-- radar sweep circles, decorative, unique to this panel -->
+    <circle cx="450" cy="90" r="10" fill="none" stroke="#367BF0" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="10;70;10" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="90" r="10" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="10;70;10" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- header row -->
+    <text x="450" y="55" text-anchor="middle" class="title" font-size="34">📡 Contact Me</text>
+    <text x="450" y="82" text-anchor="middle" class="mono sub" font-size="14" letter-spacing="1">Pick a channel — I reply fast</text>
+
+    <!-- Instagram card -->
+    <a href="https://www.instagram.com/suryaxcristiano7" target="_blank">
+      <rect x="100" y="150" width="320" height="90" rx="16" fill="#0D0F16" stroke="url(#igGrad)" stroke-width="2" filter="url(#cardGlowIg)"/>
+      <circle cx="150" cy="195" r="24" fill="url(#igGrad)"/>
+      <path d="M150 183 a12 12 0 1 0 0.1 0 z M150 195 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 M159 184.5 a1.8 1.8 0 1 0 0.1 0z"
+            fill="none" stroke="#FFFFFF" stroke-width="2"/>
+      <rect x="138" y="183" width="24" height="24" rx="7" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="150" cy="195" r="6.5" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="159.5" cy="184.5" r="1.6" fill="#FFFFFF"/>
+      <text x="190" y="190" class="mono" font-size="18" font-weight="700" fill="#F1F2F6">Instagram</text>
+      <text x="190" y="212" class="mono" font-size="13" fill="#8B949E">@suryaxcristiano7</text>
+    </a>
+
+    <!-- Telegram card -->
+    <a href="https://t.me/SuryaXCristiano" target="_blank">
+      <rect x="480" y="150" width="320" height="90" rx="16" fill="#0D0F16" stroke="url(#tgGrad)" stroke-width="2" filter="url(#cardGlowTg)"/>
+      <circle cx="530" cy="195" r="24" fill="url(#tgGrad)"/>
+      <path d="M519 195 l22 -11 l-8 22 l-5 -8 l-6 5 z" fill="#FFFFFF"/>
+      <text x="570" y="190" class="mono" font-size="18" font-weight="700" fill="#F1F2F6">Telegram</text>
+      <text x="570" y="212" class="mono" font-size="13" fill="#8B949E">@SuryaXCristiano</text>
+    </a>
+
+    <text x="450" y="262" text-anchor="middle" class="mono" font-size="12" fill="#565A73">tap a card to open</text>
+
+  </g>
+</svg>
