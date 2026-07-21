@@ -1,0 +1,93 @@
+<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507"/>
+      <stop offset="50%" stop-color="#0A0E14"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="45%" stop-color="#367BF0"/>
+      <stop offset="100%" stop-color="#FF3232"/>
+      <animate attributeName="x1" values="-30%;130%;-30%" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="70%;230%;70%" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#367BF0"/>
+      <stop offset="100%" stop-color="#FF3232"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- much softer, tighter glow for the name -->
+    <filter id="nameGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="soft"/>
+      <feColorMatrix in="soft" type="matrix"
+        values="0 0 0 0 0.13
+                0 0 0 0 0.45
+                0 0 0 0 0.75
+                0 0 0 0.55 0" result="tinted"/>
+      <feMerge>
+        <feMergeNode in="tinted"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="frame">
+      <rect x="4" y="4" width="892" height="252" rx="16"/>
+    </clipPath>
+
+    <style>
+      .code   { font-family: 'Fira Code', monospace; fill: #14243A; font-size: 13px; }
+      .name   { font-family: 'Fira Code', monospace; font-weight: 800; }
+      .brack  { fill: #22D3EE; font-family: 'Fira Code', monospace; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect x="4" y="4" width="892" height="252" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" filter="url(#glow)"/>
+  <rect x="6" y="6" width="888" height="248" rx="14" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#frame)">
+    <g class="code" opacity="0.55">
+      <text x="40"  y="40">01</text><text x="40"  y="66">10</text><text x="40"  y="92">11</text><text x="40"  y="118">00</text><text x="40" y="144">01</text><text x="40" y="170">10</text><text x="40" y="196">11</text><text x="40" y="222">01</text>
+      <text x="90"  y="30">SU</text><text x="90"  y="56">RY</text><text x="90"  y="82">A</text><text x="90"  y="108">X</text><text x="90" y="134">CR</text><text x="90" y="160">IS</text><text x="90" y="186">TI</text><text x="90" y="212">AN</text><text x="90" y="238">O</text>
+      <text x="780" y="34">10</text><text x="780" y="60">01</text><text x="780" y="86">11</text><text x="780" y="112">00</text><text x="780" y="138">10</text><text x="780" y="164">01</text><text x="780" y="190">11</text><text x="780" y="216">00</text>
+      <text x="840" y="46">0x2F</text><text x="840" y="72">0xA1</text><text x="840" y="98">0x7C</text><text x="840" y="124">0x3D</text><text x="840" y="150">0x9E</text><text x="840" y="176">0x4B</text><text x="840" y="202">0x88</text>
+    </g>
+
+    <rect x="0" y="0" width="900" height="3" fill="#22D3EE" opacity="0.35">
+      <animate attributeName="y" values="0;260;0" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="30" y="55" class="brack" font-size="30">[</text>
+    <text x="850" y="55" class="brack" font-size="30">]</text>
+
+    <!-- unique command-line style tag with blinking cursor -->
+    <text x="450" y="70" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" letter-spacing="1">
+      <tspan fill="#22D3EE">whoami</tspan><tspan fill="#8B949E"> :: </tspan><tspan fill="#FF3232">root</tspan><tspan fill="#8B949E" fill-opacity="1">_<animate attributeName="fill-opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/></tspan>
+    </text>
+
+    <text x="450" y="150" text-anchor="middle" class="name" font-size="64" fill="url(#nameGrad)" filter="url(#nameGlow)">
+      SuryaXCristiano
+    </text>
+
+    <rect x="200" y="172" width="500" height="3" rx="1.5" fill="url(#nameGrad)">
+      <animate attributeName="width" values="0;500;500" dur="1.6s" fill="freeze"/>
+    </rect>
+
+    <text x="450" y="210" text-anchor="middle" font-family="Fira Code, monospace" font-size="16" fill="#8B949E" letter-spacing="2">Building in the Dark • Deploying in the Light</text>
+
+    <circle cx="40" cy="40" r="4" fill="#22D3EE"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="860" cy="40" r="4" fill="#367BF0"><animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="40" cy="220" r="4" fill="#FF3232"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="860" cy="220" r="4" fill="#22D3EE"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
