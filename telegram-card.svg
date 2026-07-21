@@ -1,0 +1,20 @@
+<svg width="380" height="110" viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2AABEE"/>
+      <stop offset="100%" stop-color="#229ED9"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="5" y="10" width="370" height="90" rx="16" fill="#0D0F16" stroke="url(#tgGrad)" stroke-width="2" filter="url(#cardGlow)"/>
+
+  <circle cx="50" cy="55" r="22" fill="url(#tgGrad)"/>
+  <path d="M39 55 l22 -11 l-8 22 l-5 -8 l-6 5 z" fill="#FFFFFF"/>
+
+  <text x="90" y="50" font-family="Fira Code, monospace" font-size="19" font-weight="700" fill="#F1F2F6">Telegram</text>
+  <text x="90" y="72" font-family="Fira Code, monospace" font-size="13" fill="#8B949E">@SuryaXCristiano</text>
+</svg>
