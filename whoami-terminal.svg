@@ -1,0 +1,56 @@
+<svg width="720" height="380" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF00"/>
+      <stop offset="50%" stop-color="#367BF0"/>
+      <stop offset="100%" stop-color="#FF0000"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono   { font-family: 'Fira Code', 'Consolas', monospace; }
+      .root   { fill: #FF3232; font-weight: 700; }
+      .host   { fill: #39FF14; font-weight: 700; }
+      .sep    { fill: #E6EDF3; }
+      .path   { fill: #367BF0; font-weight: 700; }
+      .cmd    { fill: #E6EDF3; }
+      .str    { fill: #F0D264; }
+      .c1     { fill: #39FF14; }
+      .c2     { fill: #22D3EE; }
+      .c3     { fill: #F0D264; }
+      .c4     { fill: #FF6EC7; }
+      .c5     { fill: #A78BFA; }
+      .c6     { fill: #FF9F45; }
+      .c7     { fill: #E6EDF3; }
+    </style>
+  </defs>
+
+  <rect x="4" y="4" width="712" height="372" rx="10" fill="none" stroke="url(#borderGrad)" stroke-width="2" filter="url(#softGlow)"/>
+  <rect x="6" y="6" width="708" height="368" rx="8" fill="#0C0C0E"/>
+
+  <rect x="6" y="6" width="708" height="34" rx="8" fill="#161616"/>
+  <rect x="6" y="24" width="708" height="16" fill="#161616"/>
+  <line x1="6" y1="40" x2="714" y2="40" stroke="#2A2A2A" stroke-width="1"/>
+  <circle cx="26" cy="23" r="6" fill="#FF5F56"/>
+  <circle cx="46" cy="23" r="6" fill="#FFBD2E"/>
+  <circle cx="66" cy="23" r="6" fill="#27C93F"/>
+  <text x="360" y="28" text-anchor="middle" class="mono" font-size="13" fill="#8B949E">root@suryaxcristiano: ~</text>
+
+  <g class="mono" font-size="16">
+    <text x="20" y="70"><tspan class="root">root</tspan><tspan class="sep">@</tspan><tspan class="host">suryaxcristiano</tspan><tspan class="sep">:</tspan><tspan class="path">~</tspan><tspan class="sep">#</tspan><tspan class="cmd"> echo </tspan><tspan class="str">"$(whoami)"</tspan></text>
+
+    <text x="20" y="108"><tspan>🧑‍💻</tspan><tspan class="c1" dx="10">Surya, 18 — Student / Developer / Designer.</tspan></text>
+    <text x="20" y="134"><tspan>🛡️</tspan><tspan class="c2" dx="10">Focused on Cybersecurity &amp; Secure Architectures,</tspan></text>
+    <text x="20" y="158"><tspan>🌐</tspan><tspan class="c3" dx="10">Web Development, and Bot Development.</tspan></text>
+    <text x="20" y="184"><tspan>⚡</tspan><tspan class="c4" dx="10">Superpower: AI Prompting.</tspan></text>
+    <text x="20" y="210"><tspan>🔥</tspan><tspan class="c5" dx="10">Motto: "Turning Ideas to Reality with Passion."</tspan></text>
+    <text x="20" y="236"><tspan>🚀</tspan><tspan class="c6" dx="10">Not here to stack languages —</tspan></text>
+    <text x="20" y="260"><tspan>🎯</tspan><tspan class="c7" dx="10">here to build things that matter.</tspan></text>
+
+    <text x="20" y="310"><tspan class="root">root</tspan><tspan class="sep">@</tspan><tspan class="host">suryaxcristiano</tspan><tspan class="sep">:</tspan><tspan class="path">~</tspan><tspan class="sep">#</tspan><tspan class="cmd" fill-opacity="1"> _<animate attributeName="fill-opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/></tspan></text>
+  </g>
+
+</svg>
