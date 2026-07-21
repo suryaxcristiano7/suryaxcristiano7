@@ -1,0 +1,23 @@
+<svg width="380" height="110" viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#405DE6"/>
+      <stop offset="35%" stop-color="#C13584"/>
+      <stop offset="70%" stop-color="#FD1D1D"/>
+      <stop offset="100%" stop-color="#F77737"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="5" y="10" width="370" height="90" rx="16" fill="#0D0F16" stroke="url(#igGrad)" stroke-width="2" filter="url(#cardGlow)"/>
+
+  <rect x="30" y="35" width="40" height="40" rx="12" fill="none" stroke="url(#igGrad)" stroke-width="3"/>
+  <circle cx="50" cy="55" r="11" fill="none" stroke="url(#igGrad)" stroke-width="3"/>
+  <circle cx="63" cy="42" r="2.6" fill="url(#igGrad)"/>
+
+  <text x="90" y="50" font-family="Fira Code, monospace" font-size="19" font-weight="700" fill="#F1F2F6">Instagram</text>
+  <text x="90" y="72" font-family="Fira Code, monospace" font-size="13" fill="#8B949E">@suryaxcristiano7</text>
+</svg>
