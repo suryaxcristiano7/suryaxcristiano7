@@ -70,20 +70,13 @@
     <text x="30" y="55" class="brack" font-size="30">[</text>
     <text x="850" y="55" class="brack" font-size="30">]</text>
 
-    <!-- unique command-line style tag with blinking cursor -->
-    <text x="450" y="70" text-anchor="middle" font-family="Fira Code, monospace" font-size="15" letter-spacing="1">
-      <tspan fill="#22D3EE">whoami</tspan><tspan fill="#8B949E"> :: </tspan><tspan fill="#FF3232">root</tspan><tspan fill="#8B949E" fill-opacity="1">_<animate attributeName="fill-opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/></tspan>
-    </text>
-
-    <text x="450" y="150" text-anchor="middle" class="name" font-size="64" fill="url(#nameGrad)" filter="url(#nameGlow)">
+    <text x="450" y="145" text-anchor="middle" class="name" font-size="64" fill="url(#nameGrad)" filter="url(#nameGlow)">
       SuryaXCristiano
     </text>
 
     <rect x="200" y="172" width="500" height="3" rx="1.5" fill="url(#nameGrad)">
       <animate attributeName="width" values="0;500;500" dur="1.6s" fill="freeze"/>
     </rect>
-
-    <text x="450" y="210" text-anchor="middle" font-family="Fira Code, monospace" font-size="16" fill="#8B949E" letter-spacing="2">Building in the Dark • Deploying in the Light</text>
 
     <circle cx="40" cy="40" r="4" fill="#22D3EE"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></circle>
     <circle cx="860" cy="40" r="4" fill="#367BF0"><animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/></circle>

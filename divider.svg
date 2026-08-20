@@ -1,0 +1,40 @@
+<svg width="520" height="20" viewBox="0 0 520 20" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#367BF0"/>
+      <stop offset="100%" stop-color="#FF3232"/>
+      <animate attributeName="x1" values="-50%;150%;-50%" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="50%;250%;50%" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="divGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#22D3EE" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#367BF0" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#FF3232" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF3232" stop-opacity="0"/>
+      <animate attributeName="x1" values="-30%;130%;-30%" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="70%;230%;70%" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="divGlow" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- soft static base line -->
+  <rect x="10" y="9" width="500" height="2" rx="1" fill="url(#divGrad2)" opacity="0.25"/>
+
+  <!-- animated glowing line -->
+  <rect x="10" y="8" width="500" height="3" rx="1.5" fill="url(#divGrad2)" filter="url(#divGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- travelling glow pulse -->
+  <rect x="10" y="6" width="60" height="6" rx="3" fill="#22D3EE" opacity="0.6" filter="url(#divGlow)">
+    <animate attributeName="x" values="10;450;10" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
